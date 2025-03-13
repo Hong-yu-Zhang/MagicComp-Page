@@ -124,89 +124,80 @@
 </section>
 
 <div class="container">
-  <!-- 第一行 -->
+  <!-- Challenge 标题 -->
+  <h1 style="text-align: center; font-size: 32px; margin-bottom: 40px; color: #333;">
+    Challenge: Video Comparison
+  </h1>
+
+  <!-- 第一行：CogvideoX -->
   <div class="row">
-    <!-- 对比组 1 -->
-    <div class="comparison-group">
-      <div class="baseline">
-        <video controls>
-          <source src="clownfish_baseline.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <h3>Baseline</h3>
-        <p>Clownfish swimming through the coral reef.</p>
-      </div>
-      <div class="vico">
-        <video controls>
-          <source src="clownfish_vico.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <h3>+Vico</h3>
-        <p>Clownfish swimming through the coral reef with enhanced details.</p>
-      </div>
+    <!-- 第 1 列 -->
+    <div class="column">
+      <h2>CogvideoX</h2>
+      <video controls>
+        <source src="./static/videos/Fig1/1-Baseline.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>Prompt 1</h3>
+      <p>Clownfish swimming through the coral reef.</p>
     </div>
 
-    <!-- 对比组 2 -->
-    <div class="comparison-group">
-      <div class="baseline">
-        <video controls>
-          <source src="boat_plane_baseline.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <h3>Baseline</h3>
-        <p>A boat and a plane.</p>
-      </div>
-      <div class="vico">
-        <video controls>
-          <source src="boat_plane_vico.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <h3>+Vico</h3>
-        <p>A boat and a plane with enhanced details.</p>
-      </div>
+    <!-- 第 2 列 -->
+    <div class="column">
+      <h2>CogvideoX</h2>
+      <video controls>
+        <source src="./static/videos/Fig1/2-Baseline.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>Prompt 2</h3>
+      <p>A boat and a plane.</p>
+    </div>
+
+    <!-- 第 3 列 -->
+    <div class="column">
+      <h2>CogvideoX</h2>
+      <video controls>
+        <source src="./static/videos/Fig1/3-Baseline.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>Prompt 3</h3>
+      <p>A toaster and two teddy bears.</p>
     </div>
   </div>
 
-  <!-- 第二行 -->
+  <!-- 第二行：MagicComp -->
   <div class="row">
-    <!-- 对比组 3 -->
-    <div class="comparison-group">
-      <div class="baseline">
-        <video controls>
-          <source src="toaster_teddy_baseline.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <h3>Baseline</h3>
-        <p>A toaster and two teddy bears.</p>
-      </div>
-      <div class="vico">
-        <video controls>
-          <source src="toaster_teddy_vico.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <h3>+Vico</h3>
-        <p>A toaster and two teddy bears with enhanced details.</p>
-      </div>
+    <!-- 第 1 列 -->
+    <div class="column">
+      <h2>MagicComp</h2>
+      <video controls>
+        <source src="./static/videos/Fig1/1-Ours.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>Prompt 1</h3>
+      <p>Clownfish swimming through the coral reef with enhanced details.</p>
     </div>
 
-    <!-- 对比组 4 -->
-    <div class="comparison-group">
-      <div class="baseline">
-        <video controls>
-          <source src="pizza_tie_baseline.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <h3>Baseline</h3>
-        <p>Pizza and a tie.</p>
-      </div>
-      <div class="vico">
-        <video controls>
-          <source src="pizza_tie_vico.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <h3>+Vico</h3>
-        <p>Pizza and a tie with enhanced details.</p>
-      </div>
+    <!-- 第 2 列 -->
+    <div class="column">
+      <h2>MagicComp</h2>
+      <video controls>
+        <source src="./static/videos/Fig1/2-Ours.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>Prompt 2</h3>
+      <p>A boat and a plane with enhanced details.</p>
+    </div>
+
+    <!-- 第 3 列 -->
+    <div class="column">
+      <h2>MagicComp</h2>
+      <video controls>
+        <source src="./static/videos/Fig1/3-Ours.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>Prompt 3</h3>
+      <p>A toaster and two teddy bears with enhanced details.</p>
     </div>
   </div>
 </div>
