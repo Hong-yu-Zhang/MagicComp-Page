@@ -61,7 +61,8 @@
     }
 
     .vertical-label {
-    top: 50%;
+    top: 50%; /* 将标签顶部定位在父容器的中间 */
+    transform: translateY(-50%) rotate(180deg); /* 将标签中心对齐并旋转 */
     writing-mode: vertical-rl; /* 竖排文字 */
     transform: rotate(180deg);
     font-size: 24px;
@@ -245,7 +246,7 @@
         <source src="./static/videos/Fig1/1-Ours.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <p>Prompt: A sculpture displayed behind candle sitting on the right of a fireplace.</p>
+      <p>A sculpture displayed behind candle sitting on the right of a fireplace.</p>
     </div>
 
     <!-- 第 2 列：Misaligned spatial relationship -->
@@ -254,7 +255,7 @@
         <source src="./static/videos/Fig1/2-Ours.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <p>Prompt: A like sitting behind a Chicken.</p>
+      <p>A like sitting behind a Chicken.</p>
     </div>
 
     <!-- 第 3 列：Missing Entity -->
@@ -263,7 +264,7 @@
         <source src="./static/videos/Fig1/3-Ours.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <p>Prompt: Example description for missing entity.</p>
+      <p>A lion sitting behind a chicken.</p>
     </div>
   </div>
 
