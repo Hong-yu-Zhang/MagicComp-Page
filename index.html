@@ -48,76 +48,81 @@
 
   <style>
     /* 全局样式 */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f9f9f9;
+    .layout-container {
+      width: 1200px;
+      margin: 20px auto;
+      font-family: 'Helvetica Neue', sans-serif;
     }
-  
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-  
-    .row {
+    
+    /* 行容器 */
+    .video-row {
+      position: relative;
       display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px; /* 减少行间距 */
+      margin: 40px 0;
+      padding-left: 80px; /* 标签区域 */
     }
-  
-    .column {
-      flex: 1;
-      text-align: center;
-      background-color: transparent; /* 去除背景 */
-      border: none; /* 去除边框 */
-      padding: 10px; /* 减少内边距 */
-      margin: 0 10px;
-    }
-  
-    .column h2 {
-      font-size: 24px;
-      margin-bottom: 5px; /* 减少标题间距 */
-      color: #333;
-    }
-  
-    .column video {
-      max-width: 100%;
-      height: auto;
-      border-radius: 4px;
-      margin-bottom: 5px; /* 减少视频间距 */
-    }
-  
-    .column h3 {
-      font-size: 18px;
-      margin: 5px 0; /* 减少标题间距 */
-      color: #555;
-    }
-  
-    .column p {
-      font-size: 14px;
-      color: #666;
-      margin: 5px 0; /* 减少描述间距 */
-    }
-  
-    /* 左侧竖排标签样式 */
-    .label-column {
-      width: 100px; /* 固定宽度 */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-right: 20px;
-    }
-  
-    .label-column h2 {
-      font-size: 24px;
-      color: #333;
-      margin: 10px 0;
-      writing-mode: vertical-rl; /* 竖排文字 */
+    
+    /* 垂直标签样式 */
+    .vertical-label {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      writing-mode: vertical-rl;
       transform: rotate(180deg);
+      font-size: 24px;
+      font-weight: 500;
+      color: #2d3436;
+      letter-spacing: 2px;
     }
-  </style>
+    
+    /* 视频列样式 */
+    .video-column {
+      flex: 1;
+      margin: 0 15px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    
+    /* 挑战标题 */
+    .challenge-header {
+      padding: 16px;
+      background: #f8f9fa;
+      border-bottom: 1px solid #e9ecef;
+      font-size: 18px;
+      color: #495057;
+    }
+    
+    /* 视频容器 */
+    .video-wrapper {
+      position: relative;
+      padding: 12px;
+    }
+    
+    /* 时间码样式 */
+    .duration-indicator {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0,0,0,0.75);
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-feature-settings: "tnum";
+    }
+    
+    /* 提示文本 */
+    .prompt-text {
+      padding: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #6c757d;
+      border-top: 1px solid #e9ecef;
+    }
+    </style>
 
   <section class="hero">
     <div class="hero-body">
@@ -195,86 +200,86 @@
   </div>
 </section>
 
-<div class="container">
+<div class="layout-container">
   <!-- 第一行：CogvideoX -->
-  <div class="row" style="margin-top: 40px;">
-    <div class="model-label">CogvideoX</div>
-
+  <div class="video-row">
+    <div class="vertical-label">CogvideoX</div>
+    
     <!-- 语义混淆 -->
-    <div class="column">
-      <div class="challenge-title">Challenge: Semantic Confusion</div>
-      <div class="video-container">
-        <video controls>
-          <source src="./static/videos/Fig1/1-Baseline.mp4" type="video/mp4">
+    <div class="video-column">
+      <div class="challenge-header">Challenge: Semantic Confusion</div>
+      <div class="video-wrapper">
+        <video controls style="width:100%">
+          <source src="1-Baseline.mp4" type="video/mp4">
         </video>
-        <div class="timecode">0:00/0:06</div>
+        <div class="duration-indicator">0:00/0:06</div>
       </div>
-      <div class="prompt">A sculpture displayed behind candle sitting on the right of a fireplace.</div>
+      <div class="prompt-text">A sculpture showed behind candle sitting on the right of a fireplace.</div>
     </div>
 
     <!-- 空间关系错位 -->
-    <div class="column">
-      <div class="challenge-title">Challenge: Misaligned spatial relationship</div>
-      <div class="video-container">
-        <video controls>
-          <source src="./static/videos/Fig1/2-Baseline.mp4" type="video/mp4">
+    <div class="video-column">
+      <div class="challenge-header">Challenge: Misaligned spatial relationship</div>
+      <div class="video-wrapper">
+        <video controls style="width:100%">
+          <source src="2-Baseline.mp4" type="video/mp4">
         </video>
-        <div class="timecode">0:00/0:06</div>
+        <div class="duration-indicator">0:00/0:06</div>
       </div>
-      <div class="prompt">A like sitting behind a Chicken.</div>
+      <div class="prompt-text">A like sitting behind a Chicken.</div>
     </div>
 
     <!-- 缺失实体 -->
-    <div class="column">
-      <div class="challenge-title">Challenge: Missing Entity</div>
-      <div class="video-container">
-        <video controls>
-          <source src="./static/videos/Fig1/3-Baseline.mp4" type="video/mp4">
+    <div class="video-column">
+      <div class="challenge-header">Challenge: Missing Entity</div>
+      <div class="video-wrapper">
+        <video controls style="width:100%">
+          <source src="3-Baseline.mp4" type="video/mp4">
         </video>
-        <div class="timecode">0:00/0:06</div>
+        <div class="duration-indicator">0:00/0:06</div>
       </div>
-      <div class="prompt">Example description for missing entity.</div>
+      <div class="prompt-text">Example description for missing entity.</div>
     </div>
   </div>
 
   <!-- 第二行：MagicComp -->
-  <div class="row">
-    <div class="model-label">MagicComp</div>
-
+  <div class="video-row">
+    <div class="vertical-label">MagicComp</div>
+    
     <!-- 语义混淆 -->
-    <div class="column">
-      <div class="challenge-title">Challenge: Semantic Confusion</div>
-      <div class="video-container">
-        <video controls>
-          <source src="./static/videos/Fig1/1-Ours.mp4" type="video/mp4">
+    <div class="video-column">
+      <div class="challenge-header">Challenge: Semantic Confusion</div>
+      <div class="video-wrapper">
+        <video controls style="width:100%">
+          <source src="1-Ours.mp4" type="video/mp4">
         </video>
-        <div class="timecode">0:00/0:06</div>
+        <div class="duration-indicator">0:00/0:06</div>
       </div>
-      <div class="prompt">A sculpture displayed behind candle sitting on the right of a fireplace.</div>
+      <div class="prompt-text">A sculpture displayed behind candle sitting on the right of a fireplace.</div>
     </div>
 
     <!-- 空间关系错位 -->
-    <div class="column">
-      <div class="challenge-title">Challenge: Misaligned spatial relationship</div>
-      <div class="video-container">
-        <video controls>
-          <source src="./static/videos/Fig1/2-Ours.mp4" type="video/mp4">
+    <div class="video-column">
+      <div class="challenge-header">Challenge: Misaligned spatial relationship</div>
+      <div class="video-wrapper">
+        <video controls style="width:100%">
+          <source src="2-Ours.mp4" type="video/mp4">
         </video>
-        <div class="timecode">0:00/0:06</div>
+        <div class="duration-indicator">0:00/0:06</div>
       </div>
-      <div class="prompt">A like sitting behind a Chicken.</div>
+      <div class="prompt-text">A like sitting behind a Chicken.</div>
     </div>
 
     <!-- 缺失实体 -->
-    <div class="column">
-      <div class="challenge-title">Challenge: Missing Entity</div>
-      <div class="video-container">
-        <video controls>
-          <source src="./static/videos/Fig1/3-Ours.mp4" type="video/mp4">
+    <div class="video-column">
+      <div class="challenge-header">Challenge: Missing Entity</div>
+      <div class="video-wrapper">
+        <video controls style="width:100%">
+          <source src="3-Ours.mp4" type="video/mp4">
         </video>
-        <div class="timecode">0:00/0:06</div>
+        <div class="duration-indicator">0:00/0:06</div>
       </div>
-      <div class="prompt">Example description for missing entity.</div>
+      <div class="prompt-text">Example description for missing entity.</div>
     </div>
   </div>
 </div>
