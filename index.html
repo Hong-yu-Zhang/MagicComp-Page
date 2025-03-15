@@ -60,6 +60,12 @@
         text-decoration: underline; /* 添加下划线 */
     }
 
+    .caption {
+      font-size: 20px;
+      margin: 5px 0;
+      color: #100606;
+    }
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -69,7 +75,6 @@
       writing-mode: vertical-lr; /* 文字竖排 */
       transform: rotate(180deg); /* 旋转 180 度，使文字从上到下显示 */
       font-size: 24px; /* 字体大小 */
-      font-weight: bold; /* 加粗 */
       margin-right: 20px; /* 与视频列的间距 */
       text-align: center; /* 文字居中 */
       align-items: center; /* 垂直居中 */
@@ -235,7 +240,7 @@
     <div class="vertical-label">CogVideoX</div>
     <!-- 第 1 列：Semantic Confusion -->
     <div class="column">
-      <h3><strong><em>Semantic Confusion</em></strong></h3>
+      <div class="caption"><strong><em>Semantic Confusion</em></strong></div>
       <video controls>
         <source src="./static/videos/Fig1/1-Baseline.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -244,7 +249,7 @@
 
     <!-- 第 2 列：Misaligned spatial relationship -->
     <div class="column">
-      <h3><strong><em>Misaligned spatial relationship</em></strong></h3>
+      <div class="caption"><strong><em>Misaligned spatial relationship</em></strong></div>
       <video controls>
         <source src="./static/videos/Fig1/2-Baseline.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -253,7 +258,7 @@
 
     <!-- 第 3 列：Missing Entity -->
     <div class="column">
-      <h3><strong><em>Missing Entity</em></strong></h3>
+      <div class="caption"><strong><em>Missing Entity</em></strong></div>
       <video controls>
         <source src="./static/videos/Fig1/3-Baseline.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -301,41 +306,6 @@
 
   <!-- 第二行上方显示 MagicComp -->
 </div>
-
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
 
 
 
