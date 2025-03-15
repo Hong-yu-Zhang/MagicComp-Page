@@ -69,12 +69,9 @@
       writing-mode: vertical-lr; /* 文字竖排 */
       transform: rotate(180deg); /* 旋转 180 度，使文字从上到下显示 */
       font-size: 24px; /* 字体大小 */
-      font-weight: bold; /* 加粗 */
       margin-right: 20px; /* 与视频列的间距 */
-      text-align: center; /* 文字居中 */
       top: 30%; /* 垂直居中 */
       display: flex;
-      align-items: center; /* 垂直居中 */
     }
   
     .row {
@@ -264,7 +261,7 @@
   <!-- 第一行上方显示 CogvideoX -->
   <!-- 第二行：MagicComp -->
   <div class="row">
-    <div class="vertical-label">MagicComp</div>
+    <div class="vertical-label" style="font-weight: bold; color: #ff00d0;">MagicComp</div>
     <!-- 第 1 列：Semantic Confusion -->
     <div class="column">
       <video controls>
