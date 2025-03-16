@@ -160,6 +160,11 @@
       border-radius: 4px;
       margin-bottom: 5px; /* 减少视频间距 */
     }
+
+    .square-video {
+      aspect-ratio: 1 / 1; /* 长宽比 1:1，方形 */
+      height: 200px; /* 保持与其他视频高度一致 */
+    }
   
     .column h3 {
       font-size: 28px;
@@ -407,7 +412,7 @@
     <!-- 第 1 列：Model 1 -->
     <div class="column">
       <div class="caption"><b>Open-Sora-Plan</b></div>
-      <video controls>
+      <video controls class="square-video">
         <source src="./static/videos/Fig5/Consis-attr/Opensora-plan.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
