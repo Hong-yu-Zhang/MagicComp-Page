@@ -1271,7 +1271,7 @@
 
 
 <h2 class="title is-3" style="text-align: center; margin-top: 40px">Ablation Experiments</h2>
-
+<!-- Ablation-SAD-->
 <div class="container" style="margin-top: 20px">
   <div class="row">
     <div class="column">
@@ -1282,7 +1282,6 @@
       </video>
     </div>
 
-    <!-- 第 5 列：Model 5 -->
     <div class="column">
       <div class="caption" style="color:#0084ff"><b>w/ SAD</b></div>
       <video controls>
@@ -1295,6 +1294,34 @@
 
   <div class="prompt" style="font-size: 24px; text-align:center">
     <span class="highlight-prompt">A gray cat</span> and <span class="highlight-prompt">a brown dog</span> playing together in a sunny backyard
+  </div>
+  
+</div>
+
+
+<!-- Ablation-DLFA-->
+<div class="container" style="margin-top: 20px">
+  <div class="row">
+    <div class="column">
+      <div class="caption"><b>w/ 3D Region Attention</b></div>
+      <video controls>
+        <source src="./static/videos/Fig4/no_DLFA.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="column">
+      <div class="caption" style="color:#0084ff"><b>w/ DLFA</b></div>
+      <video controls>
+        <source src="./static/videos/Fig4/DLFA.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+
+  <div class="prompt" style="font-size: 24px; text-align:center">
+    <span class="highlight-prompt">A sculpture</span> displayed behind <span class="highlight-prompt">a candle</span>
   </div>
   
 </div>
@@ -1334,7 +1361,6 @@
   <!-- 第二行：MagicComp -->
   <div class="row">
     <div class="vertical-label" style="font-weight: bold; color: #ff00d0; top: 70%;">MagicComp</div>
-    <!-- 第 1 列：Semantic Confusion -->
     <div class="column">
       <video controls>
         <source src="./static/videos/Fig13/1-2-Ours.mp4" type="video/mp4">
@@ -1345,7 +1371,6 @@
       </p>
     </div>
 
-    <!-- 第 2 列：Misaligned spatial relationship -->
     <div class="column">
       <video controls>
         <source src="./static/videos/Fig1/1-90-Ours.mp4" type="video/mp4">
@@ -1356,7 +1381,6 @@
       </p>
     </div>
 
-    <!-- 第 3 列：Missing Entity -->
     <div class="column">
       <video controls>
         <source src="./static/videos/Fig1/3-99-Ours.mp4" type="video/mp4">
