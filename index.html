@@ -302,11 +302,21 @@
 <h3 class="title subsection">Motivation</h3>
 <div class="centered-list">
   <ul>
-    <li class="no-star">MagicComp resolves inter-subject semantic disambiguation and achieves spatio-temporal binding between subjects and their textual prompts through sequential refinement.</li>
+    <li class="no-star">The primary challenge in compositional T2V lies in addressing <b>two interrelated objectives:</b></li>
+    <li class="no-star"><b>(1)</b> Preventing semantic ambiguity and leakage among multiple subjects.</li>
+    <li class="no-star"><b>(2)</b> Ensuring precise attribute–location binding for each subject.</li>
+    <li class="no-star">Notably, achieving both objectives simultaneously is challenging, especially when the model is frozen. A natural approach, therefore, is to <br>decompose these objectives into distinct phases during sampling, enabling progressive refinement at each stage.</br></li>
+  </ul>
+</div>
+
+<!-- <h3 class="title subsection">Motivation</h3>
+<div class="centered-list">
+  <ul>
+    <li class="no-star"><b style="color: #ff00d0;">MagicComp</b> resolves inter-subject semantic disambiguation and achieves spatio-temporal binding between subjects and their textual prompts through sequential refinement.</li>
     <li>Task decomposition and role specialization for multi-agent collaboration and collective intelligence.</li>
     <li>Sequential task decomposition and adaptive self-routing for specialized agent selection.</li>
   </ul>
-</div>
+</div> -->
 
 
 
