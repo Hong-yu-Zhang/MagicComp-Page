@@ -88,8 +88,8 @@
 
     .centered-list li::before {
       content: "★"; /* 星形符号 */
-      color: yellow; /* 黄色 */
-      font-size: 20px; /* 符号大小 */
+      color: #ff00d0; 
+      font-size: 24px; /* 符号大小 */
       position: absolute;
       left: 0;
       top: 50%;
@@ -271,7 +271,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Text-to-video (T2V) generation has made significant strides with diffusion models. However, existing methods still struggle with accurately binding attributes, determining spatial relationships, and capturing complex action interactions between multiple subjects. To address these limitations, we propose <b>MagicComp</b>, a training-free method that enhances compositional T2V generation through dual-phase refinement. Specifically, (1) During the Conditioning Stage: We introduce the <b style="color: #0084ff;">Semantic Anchor Disambiguation (SAD)</b> to reinforces subject-specific semantics and resolve inter-subject ambiguity by progressively injecting the directional vectors of semantic anchors into original text embedding; (2) During the Denoising Stage: We propose <b style="color: #ffae00;">Dynamic Layout Fusion Attention (DLFA)</b>, which integrates grounding priors and model-adaptive spatial perception to flexibly bind subjects to their spatiotemporal regions through masked attention modulation. Furthermore, MagicComp is a model-agnostic and versatile approach, which can be seamlessly integrated into existing T2V architectures. Extensive experiments on T2V-CompBench and VBench demonstrate that MagicComp outperforms state-of-the-art methods, highlighting its potential for applications such as complex prompt-based and trajectory-controllable video generation.
+            Text-to-video (T2V) generation has made significant strides with diffusion models. However, existing methods still struggle with accurately binding attributes, determining spatial relationships, and capturing complex action interactions between multiple subjects. To address these limitations, we propose <b style="color: #ff00d0;">MagicComp</b>, a training-free method that enhances compositional T2V generation through dual-phase refinement. Specifically, (1) During the Conditioning Stage: We introduce the <b style="color: #0084ff;">Semantic Anchor Disambiguation (SAD)</b> to reinforces subject-specific semantics and resolve inter-subject ambiguity by progressively injecting the directional vectors of semantic anchors into original text embedding; (2) During the Denoising Stage: We propose <b style="color: #ffae00;">Dynamic Layout Fusion Attention (DLFA)</b>, which integrates grounding priors and model-adaptive spatial perception to flexibly bind subjects to their spatiotemporal regions through masked attention modulation. Furthermore, MagicComp is a model-agnostic and versatile approach, which can be seamlessly integrated into existing T2V architectures. Extensive experiments on T2V-CompBench and VBench demonstrate that MagicComp outperforms state-of-the-art methods, highlighting its potential for applications such as complex prompt-based and trajectory-controllable video generation.
           </p>
         </div>
       </div>
