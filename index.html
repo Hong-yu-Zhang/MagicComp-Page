@@ -96,6 +96,11 @@
       transform: translateY(-50%); /* 垂直居中 */
     }
 
+    /* 禁用特定 <li> 的星号 */
+    .centered-list li.no-star::before {
+      content: none;
+    }
+
     .highlight-prompt {
         color: #FF5733;
         text-decoration: underline; /* 添加下划线 */
@@ -296,8 +301,8 @@
 
 <h3 class="title subsection">Motivation</h3>
 <div class="centered-list">
-  MagicComp resolves inter-subject semantic disambiguation and achieves spatio-temporal binding between subjects and their textual prompts through sequential refinement.
   <ul>
+    <li class="no-star">MagicComp resolves inter-subject semantic disambiguation and achieves spatio-temporal binding between subjects and their textual prompts through sequential refinement.</li>
     <li>Task decomposition and role specialization for multi-agent collaboration and collective intelligence.</li>
     <li>Sequential task decomposition and adaptive self-routing for specialized agent selection.</li>
   </ul>
